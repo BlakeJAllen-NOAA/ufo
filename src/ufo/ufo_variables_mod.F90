@@ -13,7 +13,7 @@ public :: ufo_vars_read, ufo_vars_getindex
 
 integer, parameter, public :: n_aerosols_gocart_default=14,&
      &n_aerosols_gocart_gefs=15,n_aerosols_gocart_ufs=18,&
-     &n_aerosols_gocart_geos=18 !soon 21 for geos
+     &n_aerosols_gocart_geos=18,n_aerosols_gocart_rrfs=3 !soon 21 for geos
 
 integer, parameter, public :: MAXVARLEN=110
 character(len=MAXVARLEN), public, parameter :: var_tv   = "virtual_temperature"
@@ -165,10 +165,14 @@ character(len=MAXVARLEN), public :: var_phaeo_conc      = "phaeocystis_concentra
 
 ! GOCART quantities  for AODCRTM
 character(len=MAXVARLEN), public, parameter :: var_du001 = "mass_fraction_of_dust001_in_air"
+!character(len=MAXVARLEN), public, parameter :: var_du001 = "mass_fraction_of_dust001_in_air"
+character(len=MAXVARLEN), public, parameter :: var_du001 = "mixing_ratio_of_dust_wrt_dry_air"
 character(len=MAXVARLEN), public, parameter :: var_du002 = "mass_fraction_of_dust002_in_air"
 character(len=MAXVARLEN), public, parameter :: var_du003 = "mass_fraction_of_dust003_in_air"
 character(len=MAXVARLEN), public, parameter :: var_du004 = "mass_fraction_of_dust004_in_air"
 character(len=MAXVARLEN), public, parameter :: var_du005 = "mass_fraction_of_dust005_in_air"
+!character(len=MAXVARLEN), public, parameter :: var_du005 = "mass_fraction_of_dust005_in_air"
+character(len=MAXVARLEN), public, parameter :: var_du005 = "mixing_ratio_of_coarsepm_wrt_dry_air"
 character(len=MAXVARLEN), public, parameter :: var_ss001 = "mass_fraction_of_sea_salt001_in_air"
 character(len=MAXVARLEN), public, parameter :: var_ss002 = "mass_fraction_of_sea_salt002_in_air"
 character(len=MAXVARLEN), public, parameter :: var_ss003 = "mass_fraction_of_sea_salt003_in_air"
@@ -177,6 +181,8 @@ character(len=MAXVARLEN), public, parameter :: var_ss005 = "mass_fraction_of_sea
 character(len=MAXVARLEN), public, parameter :: var_bcphobic = "mass_fraction_of_hydrophobic_black_carbon_in_air"
 character(len=MAXVARLEN), public, parameter :: var_bcphilic = "mass_fraction_of_hydrophilic_black_carbon_in_air"
 character(len=MAXVARLEN), public, parameter :: var_ocphobic = "mass_fraction_of_hydrophobic_organic_carbon_in_air"
+!character(len=MAXVARLEN), public, parameter :: var_ocphobic = "mass_fraction_of_hydrophobic_organic_carbon_in_air"
+character(len=MAXVARLEN), public, parameter :: var_ocphobic = "mixing_ratio_of_smoke_wrt_dry_air"
 character(len=MAXVARLEN), public, parameter :: var_ocphilic = "mass_fraction_of_hydrophilic_organic_carbon_in_air"
 character(len=MAXVARLEN), public, parameter :: var_brphobic = "mass_fraction_of_hydrophobic_brown_carbon_in_air"
 character(len=MAXVARLEN), public, parameter :: var_brphilic = "mass_fraction_of_hydrophilic_brown_carbon_in_air"
@@ -225,6 +231,9 @@ character(len=maxvarlen), dimension(n_aerosols_gocart_geos), public, parameter :
      &var_du001, var_du002, var_du003, var_du004, var_du005,&
      &var_ss001, var_ss002, var_ss003, var_ss004, var_ss005,&
      &var_no3an1, var_no3an2, var_no3an3]
+
+character(len=maxvarlen), dimension(n_aerosols_gocart_rrfs), public, parameter :: &
+     &var_aerosols_gocart_rrfs = [var_ocphobic, var_du001, var_du005]
 
 ! ------------------------------------------------------------------------------
 contains
