@@ -164,13 +164,11 @@ character(len=MAXVARLEN), public :: var_dino_conc       = "dinoflagellate_concen
 character(len=MAXVARLEN), public :: var_phaeo_conc      = "phaeocystis_concentration"
 
 ! GOCART quantities  for AODCRTM
-character(len=MAXVARLEN), public, parameter :: var_du001 = "mass_fraction_of_dust001_in_air"
-!character(len=MAXVARLEN), public, parameter :: var_du001 = "mass_fraction_of_dust001_in_air"
+character(len=MAXVARLEN), public, parameter :: var_dutest = "mass_fraction_of_dust001_in_air"
 character(len=MAXVARLEN), public, parameter :: var_du001 = "mixing_ratio_of_dust_wrt_dry_air"
 character(len=MAXVARLEN), public, parameter :: var_du002 = "mass_fraction_of_dust002_in_air"
 character(len=MAXVARLEN), public, parameter :: var_du003 = "mass_fraction_of_dust003_in_air"
 character(len=MAXVARLEN), public, parameter :: var_du004 = "mass_fraction_of_dust004_in_air"
-character(len=MAXVARLEN), public, parameter :: var_du005 = "mass_fraction_of_dust005_in_air"
 !character(len=MAXVARLEN), public, parameter :: var_du005 = "mass_fraction_of_dust005_in_air"
 character(len=MAXVARLEN), public, parameter :: var_du005 = "mixing_ratio_of_coarsepm_wrt_dry_air"
 character(len=MAXVARLEN), public, parameter :: var_ss001 = "mass_fraction_of_sea_salt001_in_air"
@@ -180,7 +178,6 @@ character(len=MAXVARLEN), public, parameter :: var_ss004 = "mass_fraction_of_sea
 character(len=MAXVARLEN), public, parameter :: var_ss005 = "mass_fraction_of_sea_salt005_in_air"
 character(len=MAXVARLEN), public, parameter :: var_bcphobic = "mass_fraction_of_hydrophobic_black_carbon_in_air"
 character(len=MAXVARLEN), public, parameter :: var_bcphilic = "mass_fraction_of_hydrophilic_black_carbon_in_air"
-character(len=MAXVARLEN), public, parameter :: var_ocphobic = "mass_fraction_of_hydrophobic_organic_carbon_in_air"
 !character(len=MAXVARLEN), public, parameter :: var_ocphobic = "mass_fraction_of_hydrophobic_organic_carbon_in_air"
 character(len=MAXVARLEN), public, parameter :: var_ocphobic = "mixing_ratio_of_smoke_wrt_dry_air"
 character(len=MAXVARLEN), public, parameter :: var_ocphilic = "mass_fraction_of_hydrophilic_organic_carbon_in_air"
